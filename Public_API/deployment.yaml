@@ -1,0 +1,73 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-api-deployment
+#  annotations:
+#    kubernetes.io/change-cause: "Initial deployment"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnet-api
+  template:
+    metadata:
+      name: artapi-app-k8s
+      labels:
+        app: dotnet-api
+        env: prod
+        app.kubernetes.io/name: dotnet-api
+    spec:
+      containers:
+        - name: dotnet-api
+          image: majidmashhadi/artapi:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 81
+              name: artapi-app-port
+#          resources:
+#            requests:
+#                cpu: 100m
+#                memory: 10Mi
+#            limits:
+#                cpu: 200m
+#                memory: 20Mi
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:81
+            - name: MYSQL
+              value: server=mysql;port=3306;database=APP;user=root;password=MySql2023;
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Production
+#---
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: dotnet-api-service
+#spec:
+#  selector:
+#    app: dotnet-api
+#  ports:
+#    - protocol: TCP
+#      port: 81
+#      targetPort: 81
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: artapi-lb-service
+spec:
+    selector:
+        app.kubernetes.io/name: dotnet-api
+    ports:
+        - name: artapi-app-port
+          protocol: TCP
+          port: 8081
+          targetPort: 81
+    type: LoadBalancer
+
+# https://dev.to/christianzink/databases-in-a-kubernetes-angular-net-core-microservice-architecture-22jc
+# https://www.youtube.com/watch?v=x9NptrXA1dM
+
+

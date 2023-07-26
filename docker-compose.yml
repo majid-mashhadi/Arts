@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  public_api:
+    image: ${DOCKER_REGISTRY-}publicapi
+    build:
+      context: .
+      dockerfile: Public_API/Dockerfile
