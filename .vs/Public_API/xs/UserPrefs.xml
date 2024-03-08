@@ -1,4 +1,52 @@
 ﻿<Properties StartupConfiguration="{61BB7706-8E2C-43F0-95E8-F89B50BA05D4}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Public_API/Configuration/ApplicationRoleStore.cs">
+    <Files>
+      <File FileName="Public_API/Program.cs" Line="74" Column="2" />
+      <File FileName="Public_API/Dockerfile" Line="36" Column="39" />
+      <File FileName="Public_API/mysql.yaml" Line="1" Column="1" />
+      <File FileName="Public_API/Configuration/Services.cs" Line="81" Column="1" />
+      <File FileName="Public_API/appsettings.development.json" Line="9" Column="27" />
+      <File FileName="Public_API/appsettings.production.json" Line="10" Column="5" />
+      <File FileName="Public_API/deployment.yaml" Line="74" Column="1" />
+      <File FileName="Public_API/Controllers/AccountController.cs" Line="95" Column="18" />
+      <File FileName="Public_API/Controllers/ArtController.cs" Line="50" Column="1" />
+      <File FileName="Public_API/Properties/launchSettings.json" Line="55" Column="6" />
+      <File FileName="Public_API/Services/ArtService.cs" Line="132" Column="1" />
+      <File FileName="Public_API/Data/DbContext.cs" Line="18" Column="1" />
+      <File FileName="Public_API/Configuration/ApplicationRoleStore.cs" Line="5" Column="24" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Public_API" expanded="True">
+            <Node name="Public_API" expanded="True">
+              <Node name="Configuration" expanded="True">
+                <Node name="ApplicationRoleStore.cs" selected="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Dockerfile" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>expirationTimeUtc</Value>
+          <Value>utcNow</Value>
+          <Value>expirationTimeUtc &gt; utcNow</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Public__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

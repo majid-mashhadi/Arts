@@ -1,0 +1,65 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: m2-store-user-management-deployment
+  #annotations:
+  #  kubernetes.io/change-cause: "Initial deployment"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: m2-store-user-management
+  template:
+    metadata:
+      name: m2-store-user-management-app-k8s
+      labels:
+        app: m2-store-user-management
+        env: prod
+        app.kubernetes.io/name: m2-store-user-management
+    spec:
+      imagePullSecrets:
+      - name: dockerhub-secret
+      containers:
+        - name: m2-store-user-management
+          image: majidmashhadi/m2-store-user-management:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              name: m2-um-svc-http
+            - containerPort: 443
+              name: m2-um-svc-https
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
+            - name: MYSQL
+              value: server=mysql;port=3306;database=M2Store_UserManagement;user=root;password=MySql2023;
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Production
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: m2-store-user-management-lb-service
+spec:
+  selector:
+    app.kubernetes.io/name: m2-store-user-management
+  ports:
+    - name: m2-um-svc-http
+      protocol: TCP
+      port: 5000
+      targetPort: 80
+    - name: m2-um-svc-https
+      protocol: TCP
+      port: 5001
+      targetPort: 443
+  type: LoadBalancer
+
+# minikube tunnel
+# localhost:4000
+
+# kubectl apply -f UserManagement.yaml
+
+
+# kubectl run -it — rm — image=mysql:latest — restart=Never mysql-client — mysql -h mysql -p MySql2023
+# kubectl run -it — rm — image=mysql:latest — restart=Never mysql-client — mysql -h mysql -ppassword

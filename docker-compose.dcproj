@@ -3,10 +3,10 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>{4C77A234-9FFF-4A0C-BF6F-536F585028B6}</ProjectGuid>
+    <ProjectGuid>{33E4AF55-5B98-40BD-862F-007A456CFFED}</ProjectGuid>
     <DockerLaunchBrowser>True</DockerLaunchBrowser>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>public_api</DockerServiceName>
+    <DockerServiceName>usermanagementservice</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

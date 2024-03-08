@@ -1,20 +1,20 @@
 version: '3.4'
 
 services:
-  public_api:
-    container_name: Public_API
+  usermanagementservice:
+    container_name: UserManagementService
     build:
       labels:
         com.microsoft.created-by: "visual-studio"
-        com.microsoft.visual-studio.project-name: "Public_API"
+        com.microsoft.visual-studio.project-name: "UserManagementService"
     volumes:
       - /Users/mm/vsdbg/vs2017u5:/remote_debugger:rw
 
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/Public_API.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/UserManagementService.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
-      com.microsoft.visual-studio.project-name: "Public_API"
+      com.microsoft.visual-studio.project-name: "UserManagementService"
     tty: true

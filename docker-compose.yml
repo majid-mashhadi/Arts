@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  public_api:
-    image: ${DOCKER_REGISTRY-}publicapi
+  usermanagementservice:
+    image:  majidmashhadi/m2-user-management-service:1
     build:
-      context: .
-      dockerfile: Public_API/Dockerfile
+      context: ./../
+      dockerfile: UserManagementService/Dockerfile

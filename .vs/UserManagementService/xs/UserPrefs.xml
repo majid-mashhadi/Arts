@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{61BB7706-8E2C-43F0-95E8-F89B50BA05D4}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <DisabledProjects>
+    <String>docker-compose.dcproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.UserManagementService PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserManagementService/Controllers/AccountController.cs">
+    <Files>
+      <File FileName="UserManagementService/Program.cs" />
+      <File FileName="UserManagementService/Configuration/Services.cs" />
+      <File FileName="UserManagementService/Configuration/ApplicationRoleStore.cs" />
+      <File FileName="UserManagementService/Configuration/SeedDb.cs" Line="24" Column="1" />
+      <File FileName="UserManagementService/Data/DbContext.cs" Line="104" Column="1" />
+      <File FileName="UserManagementService/Controllers/AccountController.cs" Line="210" Column="1" />
+      <File FileName="UserManagementService/JwtFeatures/JwtService.cs" Line="53" Column="1" />
+      <File FileName="UserManagementService/Repositories/IEmailRepository.cs" Line="7" Column="14" />
+      <File FileName="UserManagementService/JwtFeatures/JwtHandler.cs" Line="110" Column="1" />
+      <File FileName="UserManagementService/Configuration/ErrorHandlingMiddleware.cs" Line="14" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UserManagementService">
+            <Node name="M2Store.Common">
+              <Node name="Extensions" expanded="True" />
+            </Node>
+            <Node name="UserManagementService" expanded="True">
+              <Node name="Configuration" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="AccountController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="JwtFeatures" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
